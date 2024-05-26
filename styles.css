@@ -1,3 +1,9 @@
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -10,13 +16,14 @@ body {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     background-color: #f8f8f8;
-    padding: 20px 100px; /* Diminui o padding para tornar a barra mais fina */
+    padding: 20px 50px;
 }
 
-.barra-grid .titulo h1{
+.barra-grid .titulo h1 {
     font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .titulo {
     display: flex;
     justify-content: center;
@@ -30,7 +37,7 @@ body {
 }
 
 .titulo h1 {
-    font-size: 24px; /* Ajusta o tamanho da fonte do título */
+    font-size: 24px;
     margin: 0;
 }
 
@@ -60,14 +67,17 @@ body {
 }
 
 .imagem-central img {
-    width: 900px;
-    margin-top: 220px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 50px;
 }
 
 .fraseimpacto h1 {
     display: flex;
     justify-content: center;
-    font-size: 35px;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
 }
 
 .container {
@@ -78,19 +88,13 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 90px;
-}
-
-@media (min-width: 768px) {
-    .grid-produtos {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 70px;
 }
 
 .produto {
@@ -114,7 +118,7 @@ h1 {
 }
 
 .produto h2 {
-    font-size: 24px;
+    font-size: 18px;
     margin: 10px 0;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -130,11 +134,12 @@ h1 {
 }
 
 .frasefinal h1 {
-    font-family: Poppins, light;
-    margin-top: 300px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     font-size: 15px;
+    padding: 20px;
+    text-align: center;
 }
 
 .informacoes-contato {
@@ -142,13 +147,6 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-bottom: 30px;
-}
-
-.info {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .info {
@@ -170,7 +168,13 @@ h1 {
 }
 
 .info p {
-    margin: 7px 0; /* Ajusta a margem vertical dos parágrafos */
+    margin: 7px 0;
+}
+
+#formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form {
@@ -215,15 +219,71 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .barra-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .barra-grid .titulo h1 {
+        font-size: 20px;
+    }
+
+    .produtos a, .contato a {
+        font-size: 16px;
+    }
+
+    .imagem-central img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .fraseimpacto h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .frasefinal h1 {
+        font-size: 12px;
+    }
+
     .container {
         padding: 10px;
     }
 }
 
-.container #formulario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
+@media (max-width: 480px) {
+    .barra-grid {
+        padding: 5px;
+    }
+    
+    .barra-grid .titulo h1 {
+        font-size: 18px;
+    }
+
+    .produtos a, .contato a {
+        font-size: 14px;
+    }
+
+    .imagem-central img {
+        margin-top: 10px;
+    }
+
+    .fraseimpacto h1 {
+        font-size: 18px;
+    }
+
+    .frasefinal h1 {
+        font-size: 10px;
+    }
+}
+
+.frasefinal h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+footer {
+    padding: 10px 20px;
+    text-align: center;
 }
