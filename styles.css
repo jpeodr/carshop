@@ -130,7 +130,7 @@ h1 {
 }
 
 .frasefinal h1 {
-    font-family: 'Poppins', Light;
+    font-family: Poppins, light;
     margin-top: 300px;
     display: flex;
     justify-content: center;
